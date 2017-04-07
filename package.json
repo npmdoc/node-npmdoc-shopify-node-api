@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"shopify-node-api",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "shopify-node-api",
+    "description": "api documentation for [shopify-node-api (v1.7.6)](https://github.com/sinechris/shopify-node-api) [![npm package](https://img.shields.io/npm/v/npmdoc-shopify-node-api.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-shopify-node-api) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-shopify-node-api.svg)](https://travis-ci.org/npmdoc/node-npmdoc-shopify-node-api)",
     "devDependencies": {
-        "shopify-node-api": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "shopify-node-api": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-shopify-node-api",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-shopify-node-api",
+    "keywords": [
+        "documentation",
+        "shopify-node-api"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_shopify_node_api.js",
+    "name": "npmdoc-shopify-node-api",
+    "nameAlias": "npmdoc_shopify_node_api",
+    "nameOriginal": "npmdoc-shopify-node-api",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-shopify-node-api"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
