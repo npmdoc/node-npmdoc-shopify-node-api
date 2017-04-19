@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/sinechris/shopify-node-api"
-
-    >shopify-node-api (v1.7.6)</a>
+    <a href="https://github.com/sinechris/shopify-node-api">shopify-node-api (v1.7.6)</a>
 </h1>
 <h4>OAuth2 Module for Shopify API</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.shopify-node-api">module shopify-node-api</a><ol>
 
@@ -248,8 +241,8 @@
     if (!(this instanceof ShopifyAPI)) return new ShopifyAPI(config);
 
     if (config == null) { // == checks for null and undefined
-        var msg = &#x22;ShopifyAPI module expects a config object\nPlease see documentation at: https://github.com/sinechris/shopify-
-node-api\n&#x22;;
+        var msg = "ShopifyAPI module expects a config object\nPlease see documentation at: https://github.com/sinechris/shopify-
+node-api\n";
         throw new Error(msg);
     }
 
@@ -277,8 +270,8 @@ node-api\n&#x22;;
     if (!(this instanceof ShopifyAPI)) return new ShopifyAPI(config);
 
     if (config == null) { // == checks for null and undefined
-        var msg = &#x22;ShopifyAPI module expects a config object\nPlease see documentation at: https://github.com/sinechris/shopify-
-node-api\n&#x22;;
+        var msg = "ShopifyAPI module expects a config object\nPlease see documentation at: https://github.com/sinechris/shopify-
+node-api\n";
         throw new Error(msg);
     }
 
@@ -313,8 +306,8 @@ node-api\n&#x22;;
     if (!(this instanceof ShopifyAPI)) return new ShopifyAPI(config);
 
     if (config == null) { // == checks for null and undefined
-        var msg = &#x22;ShopifyAPI module expects a config object\nPlease see documentation at: https://github.com/sinechris/shopify-
-node-api\n&#x22;;
+        var msg = "ShopifyAPI module expects a config object\nPlease see documentation at: https://github.com/sinechris/shopify-
+node-api\n";
         throw new Error(msg);
     }
 
@@ -343,12 +336,12 @@ node-api\n&#x22;;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">buildAuthURL = function (){
-    var auth_url = &#x27;https://&#x27; + this.config.shop.split(&#x22;.&#x22;)[0];
-    auth_url += &#x22;.myshopify.com/admin/oauth/authorize?&#x22;;
-    auth_url += &#x22;client_id=&#x22; + this.config.shopify_api_key;
-    auth_url += &#x22;&#x26;scope=&#x22; + this.config.shopify_scope;
-    auth_url += &#x22;&#x26;redirect_uri=&#x22; + this.config.redirect_uri;
-    auth_url += &#x22;&#x26;state=&#x22; + this.config.nonce;
+    var auth_url = 'https://' + this.config.shop.split(".")[0];
+    auth_url += ".myshopify.com/admin/oauth/authorize?";
+    auth_url += "client_id=" + this.config.shopify_api_key;
+    auth_url += "&amp;scope=" + this.config.shopify_scope;
+    auth_url += "&amp;redirect_uri=" + this.config.redirect_uri;
+    auth_url += "&amp;state=" + this.config.nonce;
     return auth_url;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -395,16 +388,16 @@ res.redirect(auth_url);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">delete = function (endpoint, data, callback) {
-    if (arguments.length &#x3c; 3) {
-        if (typeof data === &#x27;function&#x27;) {
+    if (arguments.length &lt; 3) {
+        if (typeof data === 'function') {
             callback = data;
             data = null;
         } else {
             callback = new Function;
-            data = typeof data === &#x27;undefined&#x27; ? null : data;
+            data = typeof data === 'undefined' ? null : data;
         }
     }
-    this.makeRequest(endpoint, &#x27;DELETE&#x27;, data, callback);
+    this.makeRequest(endpoint, 'DELETE', data, callback);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   console.log(data);
@@ -414,17 +407,17 @@ res.redirect(auth_url);
 ### DELETE
 
 ```js
-Shopify.<span class="apidocCodeKeywordSpan">delete</span>(&#x27;/admin/products/1234567.json&#x27;, function(err, data, headers){
+Shopify.<span class="apidocCodeKeywordSpan">delete</span>('/admin/products/1234567.json', function(err, data, headers){
   console.log(data);
 });
 ```
 
 ## Errors
 
-Every response from Shopify&#x27;s API is parsed and checked if it looks like an error. Three keys are used to determine an error
- response: &#x27;error_description&#x27;, &#x27;error&#x27;, and &#x27;errors&#x27;. If any of these keys are found in the response
-, an error object will be made with the first found key&#x27;s value as the error message and the response&#x27;s status code as
- the error&#x27;s code. This error object will be passed as the first parameter in the callback, along with the response JSON and
+Every response from Shopify's API is parsed and checked if it looks like an error. Three keys are used to determine an error
+ response: 'error_description', 'error', and 'errors'. If any of these keys are found in the response
+, an error object will be made with the first found key's value as the error message and the response's status code as
+ the error's code. This error object will be passed as the first parameter in the callback, along with the response JSON and
  response headers.
 ...</pre></li>
     </ul>
@@ -442,15 +435,15 @@ Every response from Shopify&#x27;s API is parsed and checked if it looks like an
     var data = {
             client_id: this.config.shopify_api_key,
             client_secret: this.config.shopify_shared_secret,
-            code: query_params[&#x27;code&#x27;]
+            code: query_params['code']
         },
         self = this;
 
     if (!self.is_valid_signature(query_params)) {
-        return callback(new Error(&#x22;Signature is not authentic!&#x22;));
+        return callback(new Error("Signature is not authentic!"));
     }
 
-    this.makeRequest(&#x27;/admin/oauth/access_token&#x27;, &#x27;POST&#x27;, data, function(err, body){
+    this.makeRequest('/admin/oauth/access_token', 'POST', data, function(err, body){
 
         if (err) {
           // err is either already an Error or it is a JSON object with an
@@ -459,7 +452,7 @@ Every response from Shopify&#x27;s API is parsed and checked if it looks like an
           return callback(err);
         }
 
-        self.set_access_token(body[&#x27;access_token&#x27;]);
+        self.set_access_token(body['access_token']);
         callback(null, body);
 
     });
@@ -467,7 +460,7 @@ Every response from Shopify&#x27;s API is parsed and checked if it looks like an
     <li>example usage<pre class="apidocCodePre">...
 // Again assuming you are using the express framework
 
-app.get(&#x27;/finish_auth&#x27;, function(req, res){
+app.get('/finish_auth', function(req, res){
 
   var Shopify = new shopifyAPI(config), // You need to pass in your config here
     query_params = req.query;
@@ -476,7 +469,7 @@ app.get(&#x27;/finish_auth&#x27;, function(req, res){
     // This will return successful if the request was authentic from Shopify
     // Otherwise err will be non-null.
     // The module will automatically update your config with the new access token
-    // It is also available here as data[&#x27;access_token&#x27;]
+    // It is also available here as data['access_token']
   });
 
 });
@@ -493,14 +486,14 @@ app.get(&#x27;/finish_auth&#x27;, function(req, res){
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">get = function (endpoint, data, callback) {
-    if (typeof data === &#x27;function&#x27; &#x26;&#x26; arguments.length &#x3c; 3) {
+    if (typeof data === 'function' &amp;&amp; arguments.length &lt; 3) {
         callback = data;
         data = null;
     } else {
-      endpoint += &#x27;?&#x27; + querystring.stringify(data);
+      endpoint += '?' + querystring.stringify(data);
       data = null;
     }
-    this.makeRequest(endpoint,&#x27;GET&#x27;, data, callback);
+    this.makeRequest(endpoint,'GET', data, callback);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
@@ -512,7 +505,7 @@ Shopify will send along some query parameters including: code (your temporary to
 
 // Again assuming you are using the express framework
 
-app.<span class="apidocCodeKeywordSpan">get</span>(&#x27;/finish_auth&#x27;, function(req, res){
+app.<span class="apidocCodeKeywordSpan">get</span>('/finish_auth', function(req, res){
 
 var Shopify = new shopifyAPI(config), // You need to pass in your config here
   query_params = req.query;
@@ -548,7 +541,7 @@ Shopify.exchange_temporary_token(query_params, function(err, data){
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">hostname = function () {
-  return this.config.shop.split(&#x22;.&#x22;)[0] + &#x27;.myshopify.com&#x27;;
+  return this.config.shop.split(".")[0] + '.myshopify.com';
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -563,28 +556,28 @@ Shopify.exchange_temporary_token(query_params, function(err, data){
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">is_valid_signature = function (params, non_state) {
-    if(!non_state &#x26;&#x26; this.config.nonce !== params[&#x27;state&#x27;]){
+    if(!non_state &amp;&amp; this.config.nonce !== params['state']){
         return false;
     }
 
-    var hmac = params[&#x27;hmac&#x27;],
+    var hmac = params['hmac'],
         secret = this.config.shopify_shared_secret,
         parameters = [],
         digest,
         message;
 
     for (var key in params) {
-        if (key !== &#x22;hmac&#x22; &#x26;&#x26; key !== &#x22;signature&#x22;) {
-            parameters.push(key + &#x27;=&#x27; + params[key]);
+        if (key !== "hmac" &amp;&amp; key !== "signature") {
+            parameters.push(key + '=' + params[key]);
         }
     }
 
-    message = parameters.sort().join(&#x27;&#x26;&#x27;);
+    message = parameters.sort().join('&amp;');
 
     digest = crypto
-                .createHmac(&#x27;SHA256&#x27;, secret)
+                .createHmac('SHA256', secret)
                 .update(message)
-                .digest(&#x27;hex&#x27;);
+                .digest('hex');
 
     return (digest === hmac);
 }</pre></li>
@@ -598,7 +591,7 @@ ShopifyAPI.prototype.exchange_temporary_token = function(query_params, callback)
 
   // Return an error if signature is not valid
   if (!self.<span class="apidocCodeKeywordSpan">is_valid_signature</span>(query_params)) {
-    return callback(new Error(&#x22;Signature is not authentic!&#x22;));
+    return callback(new Error("Signature is not authentic!"));
   }
 
   // do more things...
@@ -618,47 +611,47 @@ ShopifyAPI.prototype.exchange_temporary_token = function(query_params, callback)
     <ul>
     <li>description and source-code<pre class="apidocCodePre">makeRequest = function (endpoint, method, data, callback, retry) {
 
-    var https = require(&#x27;https&#x27;),
+    var https = require('https'),
         dataString = JSON.stringify(data),
         options = {
             hostname: this.hostname(),
             path: endpoint,
-            method: method.toLowerCase() || &#x27;get&#x27;,
+            method: method.toLowerCase() || 'get',
             port: this.port(),
             agent: this.config.agent,
             headers: {
-                &#x27;Content-Type&#x27;: &#x27;application/json&#x27;,
-                &#x27;Accept&#x27;: &#x27;application/json&#x27;
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
             }
         },
         self = this;
 
     if (this.config.access_token) {
-      options.headers[&#x27;X-Shopify-Access-Token&#x27;] = this.config.access_token;
+      options.headers['X-Shopify-Access-Token'] = this.config.access_token;
     }
 
-    if (options.method === &#x27;post&#x27; || options.method === &#x27;put&#x27; || options.method === &#x27;delete&#x27; || options.method === &#x27;patch&#x27;) {
-        options.headers[&#x27;Content-Length&#x27;] = new Buffer(dataString).length;
+    if (options.method === 'post' || options.method === 'put' || options.method === 'delete' || options.method === 'patch') {
+        options.headers['Content-Length'] = new Buffer(dataString).length;
     }
 
     var request = https.request(options, function(response){
-        self.conditional_console_log( &#x27;STATUS: &#x27; + response.statusCode );
-        self.conditional_console_log( &#x27;HEADERS: &#x27; + JSON.stringify(response.headers) );
+        self.conditional_console_log( 'STATUS: ' + response.statusCode );
+        self.conditional_console_log( 'HEADERS: ' + JSON.stringify(response.headers) );
 
-        if (response.headers &#x26;&#x26; response.headers.http_x_shopify_shop_api_call_limit) {
-            self.conditional_console_log( &#x27;API_LIMIT: &#x27; + response.headers.http_x_shopify_shop_api_call_limit);
+        if (response.headers &amp;&amp; response.headers.http_x_shopify_shop_api_call_limit) {
+            self.conditional_console_log( 'API_LIMIT: ' + response.headers.http_x_shopify_shop_api_call_limit);
         }
 
-        response.setEncoding(&#x27;utf8&#x27;);
+        response.setEncoding('utf8');
 
-        var body = &#x27;&#x27;;
+        var body = '';
 
-        response.on(&#x27;data&#x27;, function(chunk){
-            self.conditional_console_log( &#x27;BODY: &#x27; + chunk );
+        response.on('data', function(chunk){
+            self.conditional_console_log( 'BODY: ' + chunk );
             body += chunk;
         });
 
-        response.on(&#x27;end&#x27;, function(){
+        response.on('end', function(){
 
             var delay = 0;
 
@@ -670,9 +663,9 @@ ShopifyAPI.prototype.exchange_temporary_token = function(query_params, callback)
             }
 
             // If the backoff limit is reached, add a delay before executing callback function
-            if (response.statusCode === 200 &#x26;&#x26; self.has_header(response, &#x27;http_x_shopify_shop_api_call_limit&#x27;)) {
-                var api_limit = parseInt(response.headers[&#x27;http_x_shopify_shop_api_call_limit&#x27;].split(&#x27;/&#x27;)[0], 10);
-                if (api_limit &#x3e;= (self.config.backoff || 35)) delay = self.config.backoff_delay || 1000; // in ms
+            if (response.statusCode === 200 &amp;&amp; self.has_header(response, 'http_x_shopify_shop_api_call_limit')) {
+                var api_limit = parseInt(response.headers['http_x_shopify_shop_api_call_limit'].split('/')[0], 10);
+                if (api_limit &gt;= (self.config.backoff || 35)) delay = self.config.backoff_delay || 1000; // in ms
             }
 
             setTimeout(function(){
@@ -681,10 +674,10 @@ ShopifyAPI.prototype.exchange_temporary_token = function(query_params, callback)
                     , error;
 
                 try {
-                    if (body.trim() != &#x27;&#x27;) { //on some requests, Shopify retuns an empty body (several spaces)
+                    if (body.trim() != '') { //on some requests, Shopify retuns an empty body (several spaces)
                         json = BigJSON.parse(body);
-                        if (json.hasOwnProperty(&#x27;error_description&#x27;) || json.hasOwnProperty(&#x27;error&#x27;) || json.hasOwnProperty(&#x27;errors
-&#x27;)) {
+                        if (json.hasOwnProperty('error_description') || json.hasOwnProperty('error') || json.hasOwnProperty('errors
+')) {
                             error = {
                                   error : (json.error_description || json.error || json.errors)
                                 , code  : response.statusCode
@@ -702,11 +695,11 @@ ShopifyAPI.prototype.exchange_temporary_token = function(query_params, callback)
 
     });
 
-    request.on(&#x27;error&#x27;, function(e){
-        self.conditional_console_log( &#x22;Request Error: &#x22;, e );
-        if(self.config.retry_errors &#x26;&#x26; !retry){
+    request.on('error', function(e){
+        self.conditional_console_log( "Request Error: ", e );
+        if(self.config.retry_errors &amp;&amp; !retry){
             var delay = self.config.error_retry_delay || 10000;
-            self.conditional_console_log( &#x22;retrying once in &#x22; + delay + &#x22; milliseconds&#x22; );
+            self.conditional_console_log( "retrying once in " + delay + " milliseconds" );
             setTimeout(function() {
                 self.makeRequest(endpoint, method, data, callback, true);
             }, delay );
@@ -715,7 +708,7 @@ ShopifyAPI.prototype.exchange_temporary_token = function(query_params, callback)
         }
     });
 
-    if (options.method === &#x27;post&#x27; || options.method === &#x27;put&#x27; || options.method === &#x27;delete&#x27; || options.method === &#x27;patch&#x27;) {
+    if (options.method === 'post' || options.method === 'put' || options.method === 'delete' || options.method === 'patch') {
         request.write(dataString);
     }
 
@@ -735,7 +728,7 @@ ShopifyAPI.prototype.exchange_temporary_token = function(query_params, callback)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">patch = function (endpoint, data, callback) {
-    this.makeRequest(endpoint, &#x27;PATCH&#x27;, data, callback);
+    this.makeRequest(endpoint, 'PATCH', data, callback);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -765,17 +758,17 @@ ShopifyAPI.prototype.exchange_temporary_token = function(query_params, callback)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">post = function (endpoint, data, callback) {
-    this.makeRequest(endpoint,&#x27;POST&#x27;, data, callback);
+    this.makeRequest(endpoint,'POST', data, callback);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-        &#x22;price&#x22;: &#x22;20.00&#x22;,
-        &#x22;sku&#x22;: &#x22;123&#x22;
+        "price": "20.00",
+        "sku": "123"
       }
     ]
   }
 }
 
-Shopify.<span class="apidocCodeKeywordSpan">post</span>(&#x27;/admin/products.json&#x27;, post_data, function(err, data, headers
+Shopify.<span class="apidocCodeKeywordSpan">post</span>('/admin/products.json', post_data, function(err, data, headers
 ){
   console.log(data);
 });
@@ -797,17 +790,17 @@ Shopify.<span class="apidocCodeKeywordSpan">post</span>(&#x27;/admin/products.js
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">put = function (endpoint, data, callback) {
-    this.makeRequest(endpoint, &#x27;PUT&#x27;, data, callback);
+    this.makeRequest(endpoint, 'PUT', data, callback);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 ```js
 var put_data = {
-  &#x22;product&#x22;: {
-    &#x22;body_html&#x22;: &#x22;&#x3c;strong&#x3e;Updated!&#x3c;/strong&#x3e;&#x22;
+  "product": {
+    "body_html": "&lt;strong&gt;Updated!&lt;/strong&gt;"
   }
 }
 
-Shopify.<span class="apidocCodeKeywordSpan">put</span>(&#x27;/admin/products/1234567.json&#x27;, put_data, function(err, data, headers
+Shopify.<span class="apidocCodeKeywordSpan">put</span>('/admin/products/1234567.json', put_data, function(err, data, headers
 ){
   console.log(data);
 });
@@ -843,3 +836,4 @@ Shopify.<span class="apidocCodeKeywordSpan">put</span>(&#x27;/admin/products/123
     ]
 </div>
 </div>
+</body></html>
