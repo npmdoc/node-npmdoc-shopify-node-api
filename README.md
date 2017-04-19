@@ -1,9 +1,14 @@
-# api documentation for  [shopify-node-api (v1.7.6)](https://github.com/sinechris/shopify-node-api)  [![npm package](https://img.shields.io/npm/v/npmdoc-shopify-node-api.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-shopify-node-api) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-shopify-node-api.svg)](https://travis-ci.org/npmdoc/node-npmdoc-shopify-node-api)
+# npmdoc-shopify-node-api
+
+#### api documentation for  [shopify-node-api (v1.7.6)](https://github.com/sinechris/shopify-node-api)  [![npm package](https://img.shields.io/npm/v/npmdoc-shopify-node-api.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-shopify-node-api) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-shopify-node-api.svg)](https://travis-ci.org/npmdoc/node-npmdoc-shopify-node-api)
+
 #### OAuth2 Module for Shopify API
 
-[![NPM](https://nodei.co/npm/shopify-node-api.png?downloads=true)](https://www.npmjs.com/package/shopify-node-api)
+[![NPM](https://nodei.co/npm/shopify-node-api.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/shopify-node-api)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-shopify-node-api/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-shopify-node-api_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-shopify-node-api/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-shopify-node-api/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-shopify-node-api/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-shopify-node-api/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-shopify-node-api/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-shopify-node-api/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +23,6 @@
 {
     "author": {
         "name": "Chris Gregory",
-        "email": "chris@sinelabs.com",
         "url": "http://sinelabs.com/"
     },
     "bugs": {
@@ -50,13 +54,11 @@
     "main": "./lib/shopify",
     "maintainers": [
         {
-            "name": "nodeit",
-            "email": "cgshopdev@gmail.com"
+            "name": "nodeit"
         }
     ],
     "name": "shopify-node-api",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/sinechris/shopify-node-api.git"
@@ -67,16 +69,6 @@
     "version": "1.7.6"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module shopify-node-api](#apidoc.module.shopify-node-api)
-
-
-
-# <a name="apidoc.module.shopify-node-api"></a>[module shopify-node-api](#apidoc.module.shopify-node-api)
 
 
 
