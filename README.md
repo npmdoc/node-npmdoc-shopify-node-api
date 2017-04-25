@@ -1,6 +1,6 @@
 # npmdoc-shopify-node-api
 
-#### api documentation for  [shopify-node-api (v1.7.6)](https://github.com/sinechris/shopify-node-api)  [![npm package](https://img.shields.io/npm/v/npmdoc-shopify-node-api.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-shopify-node-api) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-shopify-node-api.svg)](https://travis-ci.org/npmdoc/node-npmdoc-shopify-node-api)
+#### basic api documentation for  [shopify-node-api (v1.7.6)](https://github.com/sinechris/shopify-node-api)  [![npm package](https://img.shields.io/npm/v/npmdoc-shopify-node-api.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-shopify-node-api) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-shopify-node-api.svg)](https://travis-ci.org/npmdoc/node-npmdoc-shopify-node-api)
 
 #### OAuth2 Module for Shopify API
 
@@ -66,7 +66,8 @@
     "scripts": {
         "test": "make test"
     },
-    "version": "1.7.6"
+    "version": "1.7.6",
+    "bin": {}
 }
 ```
 
